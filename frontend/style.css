@@ -1,0 +1,119 @@
+/* frontend/style.css */
+
+:root {
+    --amazon-orange: #FF9900;
+    --amazon-dark: #131921;
+    --amazon-light: #232F3E;
+    --amazon-button: #F0C14B;
+    --amazon-button-hover: #EAAE38;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+.navbar {
+    background-color: var(--amazon-dark);
+    color: white;
+}
+
+.navbar-lower {
+    background-color: var(--amazon-light);
+    color: white;
+}
+
+.primary-button {
+    background-color: var(--amazon-button);
+    border: 1px solid #a88734;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.4) inset;
+    color: #111;
+    transition: all 0.2s ease;
+}
+
+.primary-button:hover {
+    background-color: var(--amazon-button-hover);
+}
+
+.amazon-container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.dropdown-select {
+    appearance: none; /* Remove default browser dropdown arrow */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 1em;
+    padding-right: 2.5rem; /* Make space for the custom arrow */
+}
+
+.amazon-footer {
+    background-color: var(--amazon-light);
+    color: white;
+}
+
+.back-to-top {
+    background-color: var(--amazon-light);
+    color: white;
+}
+
+.loader {
+    border-top-color: var(--amazon-orange); /* Orange part of the spinner */
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* These classes are toggled by JS to show/hide sections */
+.form-visible {
+    display: block;
+}
+
+.form-hidden {
+    display: none;
+}
+
+.prediction-visible {
+    display: block;
+}
+
+.prediction-hidden {
+    display: none;
+}
+
+.hero-section {
+    background-image: url('https://cdn.pixabay.com/photo/2016/09/21/04/46/barley-field-1684052_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Overlay to darken the background image */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* 40% black overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative; /* Ensure content is above the overlay */
+    z-index: 2;
+}

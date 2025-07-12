@@ -1,6 +1,7 @@
 # backend/app.py (Updated for Random Forest ML Model)
 
-from flask import Flask, request, jsonify
+from flask import Flask, request
+from flask import jsonify
 from flask_cors import CORS
 import pandas as pd
 import numpy as np
